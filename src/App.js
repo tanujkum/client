@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Dashbaord from './modules/Dashboard';
+import Login from './modules/form/login';
+import Form from './modules/form/signup';
+import styled from 'styled-components';
+
+const Root = styled.div`
+  display:flex;
+  justify-content:center;
+  // align-items:center;
+  height: 100vh;
+`;
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Root className="">
+     {/* <Form/> */}
+     <Dashbaord/>
+    </Root>
   );
 }
 
