@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Buttton/Button';
+import { useNavigate } from 'react-router-dom';
 
 const MainDiv = styled.div`
     width: 400px;
@@ -13,6 +14,7 @@ const MainDiv = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: auto;
 `;
 const InnerDiv = styled.div`
     font-size: 30px;
@@ -30,7 +32,7 @@ const SpanTag = styled.span`
 `;
 
 const Form = () => {
-
+    const navigate = useNavigate();
     const [data,setData] = useState({
         name:"",
         email:"",
@@ -54,7 +56,7 @@ const Form = () => {
       
         <AlreadySigninDiv>
             Already have an account? {" "}
-            <SpanTag>Sign in</SpanTag>
+            <SpanTag onClick={()=>navigate('/user/login')}>Sign in</SpanTag>
         </AlreadySigninDiv>
     </MainDiv>
   )
