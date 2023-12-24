@@ -9,6 +9,7 @@ const MainDiv = styled.div`
     // box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
     background-color: white;
     display: flex;
+    height: 97vh;
     // justify-content: center;
     // align-items: center;
     // flex-direction: column;
